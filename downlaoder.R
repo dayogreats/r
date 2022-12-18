@@ -10,6 +10,7 @@ x <- unlist(rd)
 mean(x)
 
 
+
 #Random Variables Exercises #2
 set.seed(1)
 X <- sample(x,5)
@@ -37,24 +38,15 @@ rnorm(5)
 # .Random.seed is not equal in both cases
 identical(x, y) # FALSE
 
-
-
-set.seed(1)
+set.seed(10)
+rnorm(5)   # -0.6264538  0.1836433 -0.8356286  1.5952808  0.3295078
+set.seed(11)
 rnorm(5)   # -0.6264538  0.1836433 -0.8356286  1.5952808  0.3295078
 
-set.seed(1)
-rnorm(5) 
 
-set.seed(1)
-rnorm(5) 
+#dplyr
 
-set.seed(1)
-rnorm(5) 
+chowVals <- filter(rd, Diet=="chow") %>% select(Bodyweight) %>% unlist
+class( chowVals )
 
-
-set.seed(1)
-rnorm(5) 
-
-set.seed(1)
-rnorm(5) 
 
